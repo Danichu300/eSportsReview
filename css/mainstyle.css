@@ -44,3 +44,10 @@ nav{
 .logo_container:hover{
     border:5px solid darkgray;
 }
+
+.parallax > h1{
+    color: white;
+    text-align: center;
+    padding-top: 5%;
+    font-family: Courier New;
+}
