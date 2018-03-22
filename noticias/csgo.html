@@ -11,6 +11,7 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="../css/newsstyle.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="shortcut icon" href="img/csgoicon.ico" />
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous"></script>
@@ -71,13 +72,13 @@ and open the template in the editor.
                 </ul>
             </div>
         </nav>
-
-        <section>
-            <article>
-                <h1>Próximos Partidos</h1>
-                <hr/>
-                <div id="contenido">
-                    <nav>
+        <div id="wrapper">
+            <section>
+                <article>
+                    <h1>Próximos Partidos</h1>
+                    <hr/>
+                    <div class="contenido">
+                        <!--  <nav> -->
                         <ul>
                             <li>Equipo 1 - Equipo 2</li>
                             <li>Equipo 1 - Equipo 2</li>
@@ -85,14 +86,14 @@ and open the template in the editor.
                             <li>Equipo 1 - Equipo 2</li>
                             <li>Equipo 1 - Equipo 2</li>
                         </ul>
-                    </nav>
-                </div>
-            </article>
-            <article>
-                <h1>Próximos Torneos</h1>
-                <hr/>
-                <div id="contenido">
-                    <nav>
+                        <!-- </nav> -->
+                    </div>
+                </article>
+                <article>
+                    <h1>Próximos Torneos</h1>
+                    <hr/>
+                    <div class="contenido">
+                        <!-- <nav> -->
                         <ul>
                             <li>Torneo 1</li>
                             <li>Torneo 2</li>
@@ -100,14 +101,14 @@ and open the template in the editor.
                             <li>Torneo 4</li>
                             <li>Torneo 5</li>
                         </ul>
-                    </nav>
-                </div>
-            </article>
-            <article>
-                <h1>Equipos destacados</h1>
-                <hr/>
-                <div id="contenido">
-                    <nav>
+                        <!-- </nav> -->
+                    </div>
+                </article>
+                <article>
+                    <h1>Equipos destacados</h1>
+                    <hr/>
+                    <div class="contenido">
+                        <!-- <nav> -->
                         <ul>
                             <li>Equipo 1</li>
                             <li>Equipo 1</li>
@@ -115,9 +116,166 @@ and open the template in the editor.
                             <li>Equipo 1</li>
                             <li>Equipo 1</li>
                         </ul>
-                    </nav>
+                        <!-- </nav> -->
+                    </div>
+                </article>
+            </section>
+
+            <aside>
+                <h3>Más sobre Título Videojuego</h3>
+                <hr/>
+                <div class="izquierda-img">
+                    <img src="../img/csgologo.jpg"/>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
-            </article>
-        </section>
+            </aside>
+
+            <aside>
+                <h3>Mecánicas de las partidas</h3>
+                <hr/>
+                <div class="izquierda-img">
+                    <img src="../img/csgologo.jpg"/>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="derecha-img">
+                    <img src="../img/csgologo.jpg"/>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </aside>
+
+            <aside>
+                <h3>Tácticas</h3>
+                <hr/>
+                <div class="izquierda-img">
+                    <img src="../img/csgologo.jpg"/>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </aside>
+        </div>
+
+        <!--Footer-->
+        <footer class="page-footer font-small unique-color-dark pt-0">
+
+            <div style="background-color: #3E4551;">
+                <div class="container">
+                    <!--Grid row-->
+                    <div class="row py-4 d-flex align-items-center">
+
+                        <!--Grid column-->
+                        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                            <h6 class="mb-0 white-text">¡Comparte en tus redes sociales!</h6>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-md-6 col-lg-7 text-center text-md-right">
+                            <!--Facebook-->
+                            <a class="fb-ic ml-0" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//rawgit.com/Danichu300/eSportsReview/Descargar/index.html">
+                                <i class="fa fa-facebook white-text mr-lg-4"> </i>
+                            </a>
+                            <!--Twitter-->
+                            <a class="tw-ic" target="_blank" href="https://twitter.com/home?status=https%3A//rawgit.com/Danichu300/eSportsReview/Descargar/index.html">
+                                <i class="fa fa-twitter white-text mr-lg-4"> </i>
+                            </a>
+                            <!--Google +-->
+                            <a class="gplus-ic" target="_blank" href="https://plus.google.com/share?url=https%3A//rawgit.com/Danichu300/eSportsReview/Descargar/index.html">
+                                <i class="fa fa-google-plus white-text mr-lg-4"> </i>
+                            </a>
+                            <!--Linkedin-->
+                            <a class="li-ic" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//rawgit.com/Danichu300/eSportsReview/Descargar/index.html&title=&summary=&source=">
+                                <i class="fa fa-linkedin white-text mr-lg-4"> </i>
+                            </a>
+                            <!--Email-->
+                            <a class="ins-ic" target="_blank" href="mailto:Awesome eSports Page!!!?&body=https%3A//rawgit.com/Danichu300/eSportsReview/Descargar/index.html">
+                                <i class="fa fa-envelope white-text mr-lg-4"> </i>
+                            </a>
+                        </div>
+                        <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+                </div>
+            </div>
+
+            <!--Footer Links-->
+            <div class="container mt-5 mb-4 text-center text-md-left">
+                <div class="row mt-3">
+
+                    <!--First column-->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <strong>Novedades</strong>
+                        </h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>Conoce cada detalle sobre los jugadores, torneos, partidos, regiones y equipos que más te gusten.</p>
+                    </div>
+                    <!--/.First column-->
+
+                    <!--Second column-->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <strong>Próximamente</strong>
+                        </h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>
+                            <a href="#!">Próximos partidos</a>
+                        </p>
+                        <p>
+                            <a href="#!">Torneos cercanos</a>
+                        </p>
+                        <p>
+                            <a href="#!">Equipos destacados</a>
+                        </p>
+                    </div>
+                    <!--/.Second column-->
+
+                    <!--Third column-->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <strong>Aprende sus tácticas</strong>
+                        </h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>
+                            <a href="#!">Descripciones de videojuegos</a>
+                        </p>
+                        <p>
+                            <a href="#!">Funcionamiento de las partidas</a>
+                        </p>
+                        <p>
+                            <a href="#!">Mecánicas</a>
+                        </p>
+                        <p>
+                            <a href="#!">Y mucho más...</a>
+                        </p>
+                    </div>
+                    <!--/.Third column-->
+
+                    <!--Fourth column-->
+                    <div class="col-md-4 col-lg-3 col-xl-3">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <strong>Contacta con nosotros</strong>
+                        </h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>
+                            <i class="fa fa-envelope mr-3"></i> danikillersx@gmail.com</p>
+                        <p>
+                            <i class="fa fa-envelope mr-3"></i> onesoco138@gmail.com</p>
+                        <p>
+                            <i class="fa fa-envelope mr-3"></i> justcyclo@gmail.com</p>
+                    </div>
+                    <!--/.Fourth column-->
+
+                </div>
+            </div>
+            <!--/.Footer Links-->
+
+            <!-- Copyright-->
+            <div class="footer-copyright py-3 text-center">
+                © 2018 Copyright: Daniel Rodríguez Cardell - Antonio García Llabrés - Julián Maestre Cabrera
+            </div>
+            <!--/.Copyright -->
+
+        </footer>
+        <!--/.Footer-->
     </body>
 </html>
