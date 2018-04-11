@@ -80,9 +80,9 @@ and open the template in the editor.
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="menuDesplegableEquipos" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Entrar</a>
+                        <a id="entrar" class="nav-link dropdown-toggle" href="#" id="menuDesplegableEquipos" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Entrar</a>
                         <div class="dropdown-menu" aria-labelledby="menuDesplegableEquipos">
-                            <form class="dropdown-menu p-4" style="display: block;" id="menu_login">
+                            <form method="post" action="../archivos_php/login.php" class="dropdown-menu p-4" style="display: block;" id="menu_login">
                                 <div class="form-group">
                                     <label for="exampleDropdownFormEmail2">ID</label>
                                     <input type="number" id="id" class="form-control" name="id" id="exampleDropdownFormEmail2" placeholder="NNNNN">
