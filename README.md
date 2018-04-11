@@ -11,6 +11,7 @@ Si tenéis cualquier duda decidme por WhatsApp o dejadme un mensaje por aquí.
 - Página del CSGO.
 - Base de datos bien hecha.
 - Los datos se cargan de la base de datos.
+- HE CONSEGUIDO ENVIAR CORREOS DESDE EL FOOTER!!! (necesitais un SMTP para ello).
 
 ## Cosas que hay que hacer:
 
