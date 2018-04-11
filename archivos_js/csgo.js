@@ -51,5 +51,5 @@ function submitForm() {
 }
 
 function activarEmail(){
-    $("#email").css("display", "block");
+    $("#email").toggle();
 }
