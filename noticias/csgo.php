@@ -146,11 +146,11 @@ and open the template in the editor.
                             <!--  <nav> -->
                             <ul>
                                 <?php
-                                $sql = 'SELECT id_equipo FROM equipo_partido';
+                                $sql = 'SELECT fecha_inicio FROM partido WHERE fecha_inicio > NOW()';
                                 $result = $conn->query($sql);
 
                                 while ($row = $result->fetch_assoc()) {
-                                    echo "<li>" . $row["id_equipo"] . "</li>";
+                                    echo "<li>" . $row["fecha_inicio"] . "</li>";
                                 }
                                 ?>
                             </ul>
@@ -166,7 +166,7 @@ and open the template in the editor.
                             <!-- <nav> -->
                             <ul>
                                 <?php
-                                $sql = 'SELECT * FROM torneo';
+                                $sql = 'SELECT nombre_torneo FROM torneo JOIN partido ON partido=id_partido WHERE fecha_inicio > NOW()';
                                 $result = $conn->query($sql);
 
                                 while ($row = $result->fetch_assoc()) {
