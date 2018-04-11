@@ -12,7 +12,12 @@ Si tenéis cualquier duda decidme por WhatsApp o dejadme un mensaje por aquí.
 - Hacer la plantilla de edición/creación de noticia.
 - Hacer que se guarden las noticias creadas.
 - Añadir una sección de comentarios.
+
+## Cosas menos urgentes:
+
 - Poner registros reales en la base de datos.
+- Hacerlo responsive.
+- Documentación.
 
 ## Optimizaciones (lo último de todo):
 
