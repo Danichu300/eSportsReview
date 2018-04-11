@@ -9,9 +9,10 @@ Si tenéis cualquier duda decidme por WhatsApp o dejadme un mensaje por aquí.
 
 - Hacer que el login funcione.
 - Rediseñar visualmente los recuadros de la página.
-- Hacer la plantilla de edición/creaión de noticia.
+- Hacer la plantilla de edición/creación de noticia.
 - Hacer que se guarden las noticias creadas.
 - Añadir una sección de comentarios.
+- Poner registros reales en la base de datos.
 
 ## Optimizaciones (lo último de todo):
 
