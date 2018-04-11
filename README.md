@@ -18,3 +18,5 @@ Si tenéis cualquier duda decidme por WhatsApp o dejadme un mensaje por aquí.
 - Pasarlo todo a CodeIgnite o cualquier otro modelo vista/controlador.
 - Cambiar CSS por LESS.
 - Cambiar el proyecto a Angular.
+
+Las optimizaciones es una cosa que si podemos las hacemos pero que no hay ningún problema si no las hacemos. Más que nada es para dejar el proyecto niquelado y tener más puntos, pero prefiero que prioricemos en que funcione bien.
