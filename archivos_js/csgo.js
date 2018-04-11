@@ -10,6 +10,7 @@ $(document).ready(function () {
      });
      });*/
     $("#login_button").click(submitForm);
+    $(".correo").click(activarEmail);
 });
 
 /*function submitForm() {
@@ -48,4 +49,8 @@ function submitForm() {
             alert("hola");
         }
     });
+}
+
+function activarEmail(){
+    $("#email").css("display", "block");
 }
