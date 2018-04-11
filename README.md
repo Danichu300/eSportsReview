@@ -13,10 +13,11 @@ Si tenéis cualquier duda decidme por WhatsApp o dejadme un mensaje por aquí.
 - Los datos se cargan de la base de datos.
 - Los enlaces de compartir en las redes sociales funcionan.
 - HE CONSEGUIDO ENVIAR CORREOS DESDE EL FOOTER!!! (necesitais un SMTP para ello). Va un poco como quiere.
+- El login reconoce usuario y contraseña.
 
 ## Cosas que hay que hacer:
 
-- Hacer que el login funcione.
+- Hacer el login útil (por ahora sólo redirige a otra página diciendo que ha ido bien el login). Podríamos hacer que salga el id del usuario y que aparezca el botón de crear noticia.
 - Rediseñar visualmente los recuadros de la página.
 - Hacer la plantilla de edición/creación de noticia.
 - Hacer que se guarden las noticias creadas.
