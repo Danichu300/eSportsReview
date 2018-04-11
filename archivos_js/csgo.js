@@ -35,18 +35,17 @@ $(document).ready(function () {
 
 function submitForm() {
     var parametros = {
-        "id": $("#id"),
-        "pass": $("#pass")
+        id: $("#id").val(),
+        pass: $("#pass").val()
     };
+    alert(parametros);
     $.ajax({
         data: parametros,
-        url: '..\archivos_php\login.php',
-        type: 'post',
-        beforeSend: function () {
-            alert("Procesando, espere por favor...");
-        },
-        success: function (response) {
+        url: '../archivos_php/login.php',
+        type: 'POST',
+        success: function () {
             alert("hola");
+            $("#entrar").text("patata");
         }
     });
 }
