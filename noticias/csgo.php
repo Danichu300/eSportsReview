@@ -82,42 +82,42 @@ and open the template in the editor.
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="menuDesplegableEquipos" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Entrar</a>
                         <div class="dropdown-menu" aria-labelledby="menuDesplegableEquipos">
-                             <form class="dropdown-menu p-4" style="display: block;" id="menu_login">
-                                 <div class="form-group">
-                                     <label for="exampleDropdownFormEmail2">ID</label>
-                                     <input type="number" id="id" class="form-control" name="id" id="exampleDropdownFormEmail2" placeholder="NNNNN">
-                                 </div>
-                                 <div class="form-group">
-                                     <label for="exampleDropdownFormPassword2">Contraseña</label>
-                                     <input type="password" id="pass" class="form-control" name="pass" id="exampleDropdownFormPassword2" placeholder="*****">
-                                 </div>
-                                 <div class="form-check">
-                                     <input type="checkbox" class="form-check-input" id="dropdownCheck2">
-                                     <label class="form-check-label" for="dropdownCheck2">
-                                         Remember me
-                                     </label>
-                                 </div>
-                                 <button type="submit" id="enviar" class="btn btn-primary">Sign in</button>
-                             </form> 
+                            <form class="dropdown-menu p-4" style="display: block;" id="menu_login">
+                                <div class="form-group">
+                                    <label for="exampleDropdownFormEmail2">ID</label>
+                                    <input type="number" id="id" class="form-control" name="id" id="exampleDropdownFormEmail2" placeholder="NNNNN">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleDropdownFormPassword2">Contraseña</label>
+                                    <input type="password" id="pass" class="form-control" name="pass" id="exampleDropdownFormPassword2" placeholder="*****">
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+                                    <label class="form-check-label" for="dropdownCheck2">
+                                        Remember me
+                                    </label>
+                                </div>
+                                <button type="submit" id="enviar" class="btn btn-primary">Sign in</button>
+                            </form> 
 
-                        <!--    <form class="form-login" method="post" id="login-form">
-                                <h2 class="form-login-heading">User Log In Form</h2><hr />
-                                <div id="error">
-                                </div>
-                                <div class="form-group">
-                                    <input type="number" class="form-control" placeholder="Email address" name="user_email" id="user_email" />
-                                    <span id="check-e"></span>
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Password" name="password" id="password" />
-                                </div>
-                                <hr />
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-default" name="login_button" id="login_button">
-                                        <span class="glyphicon glyphicon-log-in"></span>   Sign In
-                                    </button>
-                                </div>
-                            </form> -->
+                            <!--    <form class="form-login" method="post" id="login-form">
+                                    <h2 class="form-login-heading">User Log In Form</h2><hr />
+                                    <div id="error">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" placeholder="Email address" name="user_email" id="user_email" />
+                                        <span id="check-e"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Password" name="password" id="password" />
+                                    </div>
+                                    <hr />
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-default" name="login_button" id="login_button">
+                                            <span class="glyphicon glyphicon-log-in"></span>   Sign In
+                                        </button>
+                                    </div>
+                                </form> -->
                         </div>
                     </li>
                 </ul>
@@ -139,7 +139,7 @@ and open the template in the editor.
             <div id="wrapper">
                 <section>
                     <!-- <div class="borde"> -->
-                    <article class="bg-dark">
+                    <article class="bg-dark" id="partidos">
                         <h1>Próximos Partidos</h1>
                         <hr/>
                         <div class="contenido">
@@ -159,7 +159,7 @@ and open the template in the editor.
                     </article>
                     <!--</div>-->
                     <!-- <div class="borde"> -->
-                    <article class="bg-dark">
+                    <article class="bg-dark" id="torneos">
                         <h1>Próximos Torneos</h1>
                         <hr/>
                         <div class="contenido">
@@ -179,7 +179,7 @@ and open the template in the editor.
                     </article>
                     <!--</div>-->
                     <!-- <div class="borde"> -->
-                    <article class="bg-dark">
+                    <article class="bg-dark" id="equipos">
                         <h1>Equipos destacados</h1>
                         <hr/>
                         <div class="contenido">
@@ -200,7 +200,7 @@ and open the template in the editor.
                     <!-- </div> -->
                 </section>
 
-                <aside>
+                <aside id="descripcion">
                     <?php
                     $sql = "SELECT * FROM videojuego";
                     $result = $conn->query($sql);
@@ -214,7 +214,7 @@ and open the template in the editor.
                     </div>
                 </aside>
 
-                <aside>
+                <aside id="mecanicas">
                     <h3>Mecánicas de las partidas</h3>
                     <hr/>
                     <div class="derecha-img">
@@ -223,7 +223,7 @@ and open the template in the editor.
                     </div>
                 </aside>
 
-                <aside>
+                <aside id="tacticas">
                     <h3>Tácticas</h3>
                     <hr/>
                     <div class="izquierda-img">
@@ -307,13 +307,13 @@ and open the template in the editor.
                         </h6>
                         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                         <p>
-                            <a href="#!">Próximos partidos</a>
+                            <a href="#partidos">Próximos partidos</a>
                         </p>
                         <p>
-                            <a href="#!">Torneos cercanos</a>
+                            <a href="#torneos">Torneos cercanos</a>
                         </p>
                         <p>
-                            <a href="#!">Equipos destacados</a>
+                            <a href="#equipos">Equipos destacados</a>
                         </p>
                     </div>
                     <!--/.Second column-->
@@ -325,16 +325,13 @@ and open the template in the editor.
                         </h6>
                         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                         <p>
-                            <a href="#!">Descripciones de videojuegos</a>
+                            <a href="#descripcion">Descripciones de videojuegos</a>
                         </p>
                         <p>
-                            <a href="#!">Funcionamiento de las partidas</a>
+                            <a href="#mecanicas">Mecánicas</a>
                         </p>
                         <p>
-                            <a href="#!">Mecánicas</a>
-                        </p>
-                        <p>
-                            <a href="#!">Y mucho más...</a>
+                            <a href="#tacticas">Tácticas</a>
                         </p>
                     </div>
                     <!--/.Third column-->
@@ -345,12 +342,26 @@ and open the template in the editor.
                             <strong>Contacta con nosotros</strong>
                         </h6>
                         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                        <p>
+                        <p class="correo">
                             <i class="fa fa-envelope mr-3"></i> danikillersx@gmail.com</p>
-                        <p>
+                        <p class="correo">
                             <i class="fa fa-envelope mr-3"></i> onesoco138@gmail.com</p>
-                        <p>
+                        <p class="correo">
                             <i class="fa fa-envelope mr-3"></i> justcyclo@gmail.com</p>
+
+                        <form id="email" action="../archivos_php/email.php" method="POST" style="display:none;">
+                            <b>Por favor, selecciona el administrador con el que quieres contactar</b><br>
+                            <select name="admins">
+                                <option>danikillersx@gmail.com</option>
+                                <option>onesoco138@gmail.com</option>
+                                <option>justcyclo@gmail.com</option>
+                            </select>
+                            <p><b>Subject</b><br>
+                                <input type="text" name="subject" size=40>
+                            <p><b>Message</b><br>
+                                <textarea cols=40 rows=10 name="message"></textarea>
+                            <p><input type="submit" value=" Send ">
+                        </form>
                     </div>
                     <!--/.Fourth column-->
 
