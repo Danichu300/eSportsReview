@@ -15,7 +15,7 @@
 /* Para evitar un espacio en blanco debajo del último aside. */
 
 aside:last-child {
-    margin-bottom: 0;
+   /* margin-bottom: 0;*/
 }
 
 .jumbotron{
@@ -38,7 +38,11 @@ article:hover{
     border: 1px solid red;
 }
 
-#menu_login{
-    width: 400px;
-    height: 300px;
+#menu_login, #menu_registro{
+    display: block;
+}
+
+#menu_login, #menu_registro{
+    width: 100px;
+    height: 250px;
 }
