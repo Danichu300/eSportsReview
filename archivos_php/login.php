@@ -12,19 +12,21 @@ require ("./conexion.php");
   } */
 
 //if (isset($_POST['login_button'])) {
-    $user_email = ($_POST['id']);
-    $user_password = ($_POST['pass']);
-    $sql = "SELECT * FROM usuario WHERE id_usuario=" . $user_email;
+    $user_name = $_POST['user_registro'];
+    $user_password = $_POST['pass_registro'];
+    $admin = intval($_POST['admin']);
+    $sql = "INSERT INTO usuario (id_usuario, password, nombre_usuario, admin) VALUES (null,'" . $user_password . "','" . $user_name . "','" . $admin . "')";
     //$resultset = mysqli_query($conn, $sql) or die("database error:" . mysqli_error($conn));
     //$row = mysqli_fetch_assoc($resultset);
     $result = $conn->query($sql);
-    $row = $result->fetch_assoc();
-    if ($row['password'] == $user_password) {
-        echo "<p>ok</p>";
-        $_SESSION['user_session'] = $row['id_usuario'];
+    //$row = $result->fetch_assoc();
+    if($result){
+        echo "Estupendioso";
     } else {
-        echo "<p>email or password does not exist.</p>";
+        echo mysqli_error($conn);
     }
+    
+    header("Location: ../noticias/csgo.php#menu_registro");
 //} else {
    // echo "<p>vaya hombre :/";
 //}
