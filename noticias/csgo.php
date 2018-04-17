@@ -98,7 +98,7 @@ and open the template in the editor.
                     <li class="nav-item dropdown">
                         <a id="registrarse" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Registrarse</a>
                         <div class="dropdown-menu" aria-labelledby="menuDesplegableEquipos">
-                            <form id="menu_registro" method="post" action="../archivos_php/login.php" class="dropdown-menu p-4" style="display: block;">                               
+                            <form id="menu_registro" method="post" action="../archivos_php/login.php" class="dropdown-menu p-4">                               
                                 <div class="form-group">
                                     <label for="user_registro">Usuario</label>
                                     <input type="text" id="user_registro" class="form-control" name="user_registro" placeholder="usuario">
