@@ -72,7 +72,7 @@ and open the template in the editor.
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="menuDesplegableEquipos" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Equipos</a>
+                        <a class="nav-link dropdown-toggle" id="menuDesplegableEquipos" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Equipos</a>
                         <div class="dropdown-menu" aria-labelledby="menuDesplegableEquipos">
                             <a class="dropdown-item" href="#">Action</a>
                             <a class="dropdown-item" href="#">Another action</a>
@@ -80,44 +80,35 @@ and open the template in the editor.
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a id="entrar" class="nav-link dropdown-toggle" href="#" id="menuDesplegableEquipos" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Entrar</a>
+                        <a id="entrar" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin</a>
                         <div class="dropdown-menu" aria-labelledby="menuDesplegableEquipos">
                             <form method="post" action="../archivos_php/login.php" class="dropdown-menu p-4" style="display: block;" id="menu_login">
                                 <div class="form-group">
-                                    <label for="exampleDropdownFormEmail2">ID</label>
-                                    <input type="number" id="id" class="form-control" name="id" id="exampleDropdownFormEmail2" placeholder="NNNNN">
+                                    <label for="id">ID</label>
+                                    <input type="number" id="id" class="form-control" name="id" placeholder="NNNNN">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleDropdownFormPassword2">Contraseña</label>
-                                    <input type="password" id="pass" class="form-control" name="pass" id="exampleDropdownFormPassword2" placeholder="*****">
+                                    <label for="pass">Contraseña</label>
+                                    <input type="password" id="pass" class="form-control" name="pass" placeholder="*****">
                                 </div>
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="dropdownCheck2">
-                                    <label class="form-check-label" for="dropdownCheck2">
-                                        Remember me
-                                    </label>
+                                <button type="submit" id="enviar_admin" class="btn btn-primary">Sign in</button>
+                            </form>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a id="registrarse" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Registrarse</a>
+                        <div class="dropdown-menu" aria-labelledby="menuDesplegableEquipos">
+                            <form id="menu_registro" method="post" action="#" class="dropdown-menu p-4" style="display: block;">                               
+                                <div class="form-group">
+                                    <label for="user_registro">Usuario</label>
+                                    <input type="text" id="user_registro" class="form-control" name="user_registro" placeholder="usuario">
                                 </div>
-                                <button type="submit" id="enviar" class="btn btn-primary">Sign in</button>
-                            </form> 
-
-                            <!--    <form class="form-login" method="post" id="login-form">
-                                    <h2 class="form-login-heading">User Log In Form</h2><hr />
-                                    <div id="error">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="number" class="form-control" placeholder="Email address" name="user_email" id="user_email" />
-                                        <span id="check-e"></span>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="password" class="form-control" placeholder="Password" name="password" id="password" />
-                                    </div>
-                                    <hr />
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-default" name="login_button" id="login_button">
-                                            <span class="glyphicon glyphicon-log-in"></span>   Sign In
-                                        </button>
-                                    </div>
-                                </form> -->
+                                <div class="form-group">
+                                    <label for="pass_registro">Contraseña</label>
+                                    <input type="password" id="pass_registro" class="form-control" name="pass_registro" placeholder="*****">
+                                </div>
+                                <button type="submit" id="enviar_registro" class="btn btn-primary">Sign in</button>
+                            </form>
                         </div>
                     </li>
                 </ul>
@@ -200,46 +191,82 @@ and open the template in the editor.
                     <!-- </div> -->
                 </section>
 
-                <aside id="descripcion">
-                    <?php
-                    $sql = "SELECT * FROM videojuego";
-                    $result = $conn->query($sql);
-                    $row = $result->fetch_assoc();
-                    echo "<h2>Videojuego: " . $row['nombre_videojuego'] . "</h2>";
-                    ?>
-                    <hr/>
-                    <div class="izquierda-img">
-                        <img src="../img/csgologo.jpg"/>
-                        <p><?= $row['descripcion'] ?></p>
+                <main>
+
+                    <div class="informacion" id="descripcion">
+                        <?php
+                        $sql = "SELECT * FROM videojuego";
+                        $result = $conn->query($sql);
+                        $row = $result->fetch_assoc();
+                        echo "<h2>Videojuego: " . $row['nombre_videojuego'] . "</h2>";
+                        ?>
+                        <hr/>
+                        <div class="izquierda-img">
+                            <img src="../img/csgologo.jpg"/>
+                            <p><?= $row['descripcion'] ?></p>
+                        </div>
                     </div>
+
+                    <div class="informacion" id="mecanicas">
+                        <h3>Mecánicas de las partidas</h3>
+                        <hr/>
+                        <div class="derecha-img">
+                            <img src="../img/csgologo.jpg"/>
+                            <p><?= $row['mecanicas'] ?></p>
+                        </div>
+                    </div>
+
+                    <div class="informacion" id="tacticas">
+                        <h3>Tácticas</h3>
+                        <hr/>
+                        <div class="izquierda-img">
+                            <img src="../img/csgologo.jpg"/>
+                            <ul>
+                                <?php
+                                $texto = $row['tacticas'];
+                                $lista = explode("- ", $texto);
+                                foreach ($lista as $li) {
+                                    if ($li != "")
+                                        echo "<li>" . $li . "</li>";
+                                }
+                                ?>
+                            </ul>
+                        </div>
+                    </div>
+                </main>
+
+                <aside id="formularioComentarios">
+                    <h1>Comentarios</h1>
+                    <hr/>
+                    <h3>Añade aquí tu comentario</h3>
+                    <!-- action="../archivos_php/comentarios.php" -->
+                    <form id="formComments" method="post" action="../archivos_php/comentarios.php">
+                        <p>Introduce tu nombre de usuario</p>
+                        <input id="usuario" name="user_comment" type="text" required/>
+                        <p>Escribe lo que quieres compartir</p>
+                        <textarea id="comentario" name="text_comment" required></textarea>
+                        <input type="hidden" name="videojuego" value="csgo"/>
+                        <p id="info"></p>
+                        <input id="enviar_comentario" type="submit" value="Enviar comentario">
+                    </form>
                 </aside>
 
-                <aside id="mecanicas">
-                    <h3>Mecánicas de las partidas</h3>
-                    <hr/>
-                    <div class="derecha-img">
-                        <img src="../img/csgologo.jpg"/>
-                        <p><?= $row['mecanicas'] ?></p>
-                    </div>
-                </aside>
-
-                <aside id="tacticas">
-                    <h3>Tácticas</h3>
-                    <hr/>
-                    <div class="izquierda-img">
-                        <img src="../img/csgologo.jpg"/>
-                        <ul>
-                            <?php
-                            $texto = $row['tacticas'];
-                            $lista = explode("- ", $texto);
-                            foreach ($lista as $li) {
-                                if ($li != "")
-                                    echo "<li>" . $li . "</li>";
-                            }
-                            ?>
-                        </ul>
-                    </div>
-                </aside>
+                <?php
+                $sql = "SELECT * FROM comentarios";
+                $result = $conn->query($sql);
+           
+                while($row = $result->fetch_array()){
+                    $buscarUsuario = "SELECT nombre_usuario FROM usuario WHERE id_usuario = " . $row['usuario'] . "";
+                    $resultado = $conn->query($buscarUsuario);
+                    $usuario = $resultado->fetch_assoc();
+                    echo "<aside>";
+                    echo "<h2>" . $usuario['nombre_usuario'] . "</h2>";
+                    echo "<hr/>";
+                    echo "<h4>" . $row['fecha_comentario'] . "</h4>";
+                    echo "<p>" . $row['contenido'] . "</p>";
+                    echo "</aside>";
+                }
+                ?>
             </div>
         </div>
         <!--Footer-->
