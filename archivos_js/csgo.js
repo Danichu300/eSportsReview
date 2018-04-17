@@ -9,8 +9,14 @@ $(document).ready(function () {
      data: {id: id, pw: pass}
      });
      });*/
-    $("#login_button").click(submitForm);
+    $("#enviar_admin").click(submitForm);
     $(".correo").click(activarEmail);
+    $("#enviar_comentario").click(borrarFormulario);
+    $("#comentario").on("keypress", function(){
+        return limitar(255);
+    }).on("keyup", function(){
+        informar();
+    });
 });
 
 /*function submitForm() {
@@ -50,6 +56,34 @@ function submitForm() {
     });
 }
 
-function activarEmail(){
+function activarEmail() {
     $("#email").toggle();
+}
+
+function borrarFormulario() {
+    $("#usuario").html("");
+    $("#comentario").html("");
+    location.reload(true);
+}
+
+function limitar(max) {
+    var texto = $("#comentario").val().length;
+    if (texto >= max) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+function informar() {
+    var texto = $("#comentario").val().length;
+    var max = 65535;
+    var p = $("#info");
+    var restantes = (max - texto);
+
+    if (restantes > 0) {
+        p.html("Puedes escribir " + restantes + " carácter(es) más.");
+    } else {
+        p.html("Has alcanzado el máximo número de carácteres permitidos.");
+    }
 }
