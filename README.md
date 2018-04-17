@@ -14,6 +14,7 @@ Si tenéis cualquier duda decidme por WhatsApp o dejadme un mensaje por aquí.
 - Los enlaces de compartir en las redes sociales funcionan.
 - HE CONSEGUIDO ENVIAR CORREOS DESDE EL FOOTER!!! (necesitais un SMTP para ello). Va un poco como quiere.
 - El login reconoce usuario y contraseña.
+- Añadir una sección de comentarios.
 
 ## Cosas que hay que hacer:
 
@@ -21,7 +22,6 @@ Si tenéis cualquier duda decidme por WhatsApp o dejadme un mensaje por aquí.
 - Rediseñar visualmente los recuadros de la página.
 - Hacer la plantilla de edición/creación de noticia.
 - Hacer que se guarden las noticias creadas.
-- Añadir una sección de comentarios.
 
 ## Cosas menos urgentes:
 
