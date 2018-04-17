@@ -15,6 +15,7 @@ Si tenéis cualquier duda decidme por WhatsApp o dejadme un mensaje por aquí.
 - HE CONSEGUIDO ENVIAR CORREOS DESDE EL FOOTER!!! (necesitais un SMTP para ello). Va un poco como quiere.
 - El login reconoce usuario y contraseña.
 - Añadir una sección de comentarios.
+- Registrar usuarios.
 
 ## Cosas que hay que hacer:
 
