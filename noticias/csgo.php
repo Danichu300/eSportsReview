@@ -82,7 +82,7 @@ and open the template in the editor.
                     <li class="nav-item dropdown">
                         <a id="entrar" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin</a>
                         <div class="dropdown-menu" aria-labelledby="menuDesplegableEquipos">
-                            <form method="post" action="../archivos_php/login.php" class="dropdown-menu p-4" style="display: block;" id="menu_login">
+                            <form method="post" action="../archivos_php/login.php" class="dropdown-menu p-4" id="menu_login">
                                 <div class="form-group">
                                     <label for="id">ID</label>
                                     <input type="number" id="id" class="form-control" name="id" placeholder="NNNNN">
@@ -98,7 +98,7 @@ and open the template in the editor.
                     <li class="nav-item dropdown">
                         <a id="registrarse" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Registrarse</a>
                         <div class="dropdown-menu" aria-labelledby="menuDesplegableEquipos">
-                            <form id="menu_registro" method="post" action="#" class="dropdown-menu p-4" style="display: block;">                               
+                            <form id="menu_registro" method="post" action="../archivos_php/login.php" class="dropdown-menu p-4" style="display: block;">                               
                                 <div class="form-group">
                                     <label for="user_registro">Usuario</label>
                                     <input type="text" id="user_registro" class="form-control" name="user_registro" placeholder="usuario">
@@ -107,7 +107,8 @@ and open the template in the editor.
                                     <label for="pass_registro">Contraseña</label>
                                     <input type="password" id="pass_registro" class="form-control" name="pass_registro" placeholder="*****">
                                 </div>
-                                <button type="submit" id="enviar_registro" class="btn btn-primary">Sign in</button>
+                                <input type="hidden" name="admin" value="0"/>
+                                <button type="submit" id="enviar_registro" class="btn btn-primary">Registrarse</button>
                             </form>
                         </div>
                     </li>
