@@ -68,7 +68,7 @@
                 
                 <main>
                     <div id="divFormularioNoticia" class="bg-dark container-fluid">
-                        <form id="formularioNoticia" method="post">
+                        <form id="formularioNoticia" method="post" action="./insertarnoticia.php">
                             <h3>Título de la noticia</h3>
                             <input class="form-control" type="text" name="titulo_noticia"/>
                             <h3>Descripción de la noticia</h3>
