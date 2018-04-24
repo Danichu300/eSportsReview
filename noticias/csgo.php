@@ -20,7 +20,7 @@ and open the template in the editor.
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="../archivos_js/csgo.js"></script>
     </head>
-    <body>       
+    <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <!-- Navbar content -->
             <a class="navbar-brand" href="#">No te lo pierdas</a>
@@ -38,7 +38,7 @@ and open the template in the editor.
                             <?php
                             require("../archivos_php/conexion.php");
 
-                            $sql = 'SELECT nombre_jugador FROM jugador WHERE equipo = ' . 1;
+                            $sql = 'SELECT nombre_jugador FROM jugador JOIN equipo ON equipo=id_equipo WHERE equipo = ' . 1 . ' AND videojuego = ' . 1;
                             $result = $conn->query($sql);
 
                             while ($row = $result->fetch_assoc()) {
@@ -48,48 +48,16 @@ and open the template in the editor.
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="menuDesplegableTorneos" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Torneos</a>
-                        <div class="dropdown-menu" aria-labelledby="menuDesplegableTorneos">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="menuDesplegablePartidos" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Partidos</a>
-                        <div class="dropdown-menu" aria-labelledby="menuDesplegablePartidos">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="menuDesplegableRegiones" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Regiones</a>
-                        <div class="dropdown-menu" aria-labelledby="menuDesplegableRegiones">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="menuDesplegableEquipos" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Equipos</a>
-                        <div class="dropdown-menu" aria-labelledby="menuDesplegableEquipos">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
                         <a id="entrar" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin</a>
                         <div class="dropdown-menu" aria-labelledby="menuDesplegableEquipos">
-                            <form method="post" action="../archivos_php/login.php" class="dropdown-menu p-4" id="menu_login">
+                            <form method="post" action="../archivos_php/admin.php" class="dropdown-menu p-4" id="menu_admin">
                                 <div class="form-group">
                                     <label for="id">ID</label>
-                                    <input type="number" id="id" class="form-control" name="id" placeholder="NNNNN">
+                                    <input type="number" id="id" class="form-control" name="id_admin" placeholder="NNNNN">
                                 </div>
                                 <div class="form-group">
                                     <label for="pass">Contraseña</label>
-                                    <input type="password" id="pass" class="form-control" name="pass" placeholder="*****">
+                                    <input type="password" id="pass" class="form-control" name="pass_admin" placeholder="*****">
                                 </div>
                                 <button type="submit" id="enviar_admin" class="btn btn-primary">Sign in</button>
                             </form>
@@ -235,6 +203,25 @@ and open the template in the editor.
                         </div>
                     </div>
                 </main>
+                
+                <?php
+                
+                $sql = "SELECT * FROM noticia WHERE videojuego = 'csgo'";
+                $result = $conn->query($sql);
+                
+                while($row = $result->fetch_array()){
+                    echo "<div class='noticia'>";
+                    echo "<h3>" . $row['titulo'] . "</h3>";
+                    echo "<hr/>";
+                    if($row['imagen']){
+                        echo "<div id='contenedor_imagen'>";
+                        echo "<img src='../img/" . $row['imagen'] . "' alt='imagen_noticia'/>";
+                        echo "</div>";
+                    }
+                    echo "<p>" . $row['contenido'] . "</p>";
+                    echo "</div>";
+                }
+                ?>
 
                 <aside id="formularioComentarios">
                     <h1>Comentarios</h1>
@@ -253,7 +240,7 @@ and open the template in the editor.
                 </aside>
 
                 <?php
-                $sql = "SELECT * FROM comentarios";
+                $sql = "SELECT * FROM comentario";
                 $result = $conn->query($sql);
            
                 while($row = $result->fetch_array()){
