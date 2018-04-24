@@ -10,6 +10,7 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+        <script src="archivos_js/index.js"></script>
     </head>
     <body>
         <div class="parallax">
@@ -149,11 +150,25 @@
                         </h6>
                         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                         <p>
-                            <i class="fa fa-envelope mr-3"></i> danikillersx@gmail.com</p>
+                            <i class="fa fa-envelope mr-3 correo"></i> danikillersx@gmail.com</p>
                         <p>
-                            <i class="fa fa-envelope mr-3"></i> onesoco138@gmail.com</p>
+                            <i class="fa fa-envelope mr-3 correo"></i> onesoco138@gmail.com</p>
                         <p>
-                            <i class="fa fa-envelope mr-3"></i> justcyclo@gmail.com</p>
+                            <i class="fa fa-envelope mr-3 correo"></i> justcyclo@gmail.com</p>
+
+                        <form id="email" action="../archivos_php/email.php" method="POST" style="display:none;">
+                            <b>Por favor, selecciona el administrador con el que quieres contactar</b><br>
+                            <select name="admins">
+                                <option>danikillersx@gmail.com</option>
+                                <option>onesoco138@gmail.com</option>
+                                <option>justcyclo@gmail.com</option>
+                            </select>
+                            <p><b>Subject</b><br>
+                                <input type="text" name="subject" size=40>
+                            <p><b>Message</b><br>
+                                <textarea cols=40 rows=10 name="message"></textarea>
+                            <p><input type="submit" value=" Send ">
+                        </form>
                     </div>
                     <!--/.Fourth column-->
 
