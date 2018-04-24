@@ -1,6 +1,6 @@
 .parallax {
     /* The image used */
-    background-image: url("../img/csbackground.jpg");
+    background-image: url("../img/wip.jpg");
 
     /* Set a specific height */
     min-height: 800px; 
@@ -13,7 +13,7 @@
 }
 
 .jumbotron{
-    background: transparent;
+     background-color: rgba(0, 0, 0, 0.4);
 }
 
 .jumbotron > h1, .jumbotron > p{
@@ -45,7 +45,7 @@ article:hover{
     margin: 0 auto;
     width: 90%;
 }
-
+/* 2c4875 */
 #formularioPartidos > input, #formularioPartidos > select{
     width: 80%;
 }
