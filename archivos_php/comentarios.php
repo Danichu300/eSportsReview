@@ -16,12 +16,12 @@ $row = $result->fetch_array();
 
 if ($result) {
 
-    $sql = "INSERT INTO comentarios (id_comentario, usuario, contenido, videojuego, fecha_comentario) VALUES (null," . $row['id_usuario'] . ",'" . $texto . "','" . $videojuego . "',CURRENT_TIMESTAMP())";
+    $sql = "INSERT INTO comentario (id_comentario, usuario, contenido, videojuego, fecha_comentario) VALUES (null," . $row['id_usuario'] . ",'" . $texto . "','" . $videojuego . "',CURRENT_TIMESTAMP())";
 
     $resultado = $conn->query($sql);
 
     if ($resultado) {
-        echo "Todo guay";
+        header("Location: ../noticias/csgo.php#formularioComentarios");
     } else {
         echo mysqli_error($conn);
     }
