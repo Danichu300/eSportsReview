@@ -9,7 +9,7 @@ $(document).ready(function () {
      data: {id: id, pw: pass}
      });
      });*/
-    $("#enviar_admin").click(submitForm);
+    //$("#enviar_admin").click(submitForm);
     $(".correo").click(activarEmail);
     $("#enviar_comentario").click(borrarFormulario);
     $("#comentario").on("keypress", function(){
