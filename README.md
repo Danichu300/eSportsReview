@@ -16,13 +16,14 @@ Si tenéis cualquier duda decidme por WhatsApp o dejadme un mensaje por aquí.
 - El login reconoce usuario y contraseña.
 - Añadir una sección de comentarios.
 - Registrar usuarios.
+- Hacer el login útil (Se pueden crear noticias logeándose como admin).
+- Hacer la plantilla de edición/creación de noticia.
+- Hacer que se guarden las noticias creadas.
+- Mostrar visualmente las noticias creadas guardadas.
 
 ## Cosas que hay que hacer:
 
-- Hacer el login útil (por ahora sólo redirige a otra página diciendo que ha ido bien el login). Podríamos hacer que salga el id del usuario y que aparezca el botón de crear noticia.
 - Rediseñar visualmente los recuadros de la página.
-- Hacer la plantilla de edición/creación de noticia.
-- Hacer que se guarden las noticias creadas.
 
 ## Cosas menos urgentes:
 
