@@ -18,7 +18,7 @@ $sql = "INSERT INTO noticia (id_noticia,admin,titulo,contenido,imagen,videojuego
 $result = $conn->query($sql);
 
 if($result){
-    echo "yeeeeeee";
+    header("Location: ../index.html");
 } else {
     echo mysqli_error($conn);
 }
