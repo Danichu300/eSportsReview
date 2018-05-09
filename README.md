@@ -1,5 +1,7 @@
 # eSportsReview
 
+# Proyecto en fase de pruebas, contiene muchos registros de pruebas (Sobretodo Counter Strike Global Offensive)
+
 # Cómo funciona el proyecto:
 
 - En la sección de admin hay que introducir ID y contraseña -> ID 1 contraseña 123.
