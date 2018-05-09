@@ -39,33 +39,84 @@
                     <article class="bg-dark" id="partidos">
                         <h1>Próximos Partidos</h1>
                         <hr/>
-                            <img id="img1" class="plus" src="../img/plus.png" alt="plus"/>
-                            <form id="formularioPartidos" style="display:none;">
-                                <p>Fecha inicio</p>
-                                <input type="date" name="fecha_inicio"/>
-                                <p>Fecha fin</p>
-                                <input type="date" name="fecha_fin"/>
-                                <p>Videojuego</p>
-                                <select name="videojuego">
-                                    <option value="csgo">Counter Strike Global Offensive</option>
-                                </select>
-                                <p>Nombre</p>
-                                <input type="text" name="nombre_partido"/>
-                                <input type="submit" value="Insertar Partido"/>
-                            </form>
+                        <img id="img1" class="plus" src="../img/plus.png" alt="plus"/>
+                        <form class="formularioInsert" method="post" action="./insertarpartido.php" style="display:none;">
+                            <p>Fecha inicio</p>
+                            <input type="date" name="fecha_inicio"/>
+                            <p>Fecha fin</p>
+                            <input type="date" name="fecha_fin"/>
+                            <p>Videojuego</p>
+                            <select name="videojuego">
+                                <option value="csgo">Counter Strike Global Offensive</option>
+                                <option value="overwatch">Overwatch</option>
+                                <option value="hots">Heroes of the Storm</option>
+                                <option value="lol">League of Legends</option>
+                                <option value="pubg">PlayerUnknows BattleGrounds</option>
+                                <option value="rocket">Rocket League</option>
+                                <option value="dota">DOTA 2</option>
+                            </select>
+                            <p>Nombre del partido</p>
+                            <input type="text" name="nombre_partido"/>
+                            <input type="hidden" name="formulario" value="form1"/>
+                            <input type="submit" value="Insertar Partido"/>
+                        </form>
                     </article>
                     <article class="bg-dark" id="torneos">
                         <h1>Próximos Torneos</h1>
                         <hr/>
-                            <img id="img2" class="plus" src="../img/plus.png" alt="plus"/>
+                        <img id="img2" class="plus" src="../img/plus.png" alt="plus"/>
+                        <form class="formularioInsert" method="post" action="./insertarpartido.php" style="display:none;">
+                            <p>Nombre del torneo</p>
+                            <input type="text" name="nombre_torneo"/>
+                            <p>Partido asociado</p>
+                            <select name="partido">
+                                <?php
+                                require("./conexion.php");
+
+                                $sql = "SELECT * FROM partido";
+
+                                $result = $conn->query($sql);
+
+                                while ($row = $result->fetch_assoc()) {
+                                    if($row['nombre_partido'] != "")
+                                    echo "<option value='" . $row['id_partido'] . "'>" . $row['nombre_partido'] . "</option>";
+                                }
+                                ?>
+                            </select>
+                            <input type="hidden" name="formulario" value="form2"/>
+                            <input type="submit" value="Insertar Torneo"/>
+                        </form>
                     </article>
                     <article class="bg-dark" id="equipos">
                         <h1>Equipos destacados</h1>
                         <hr/>
-                            <img id="img3" class="plus" src="../img/plus.png" alt="plus"/>
+                        <img id="img3" class="plus" src="../img/plus.png" alt="plus"/>
+                        <form class="formularioInsert" method="post" action="./insertarpartido.php" style="display:none;">
+                            <p>Nombre del equipo</p>
+                            <input type="text" name="nombre_equipo"/>
+                            <p>Logo del equipo</p>
+                            <input type="file" name="logo"/>
+                            <p>Videojuego asociado</p>
+                            <select name="videojuego">
+                                <?php
+                                require("./conexion.php");
+
+                                $sql = "SELECT * FROM videojuego";
+
+                                $result = $conn->query($sql);
+
+                                while ($row = $result->fetch_assoc()) {
+                                    if($row['nombre_videojuego'] != "")
+                                    echo "<option value='" . $row['id_videojuego'] . "'>" . $row['nombre_videojuego'] . "</option>";
+                                }
+                                ?>
+                            </select>
+                            <input type="hidden" name="formulario" value="form3"/>
+                            <input type="submit" value="Insertar Equipo"/>
+                        </form>
                     </article>
                 </section>
-                
+
                 <main>
                     <div id="divFormularioNoticia" class="bg-dark container-fluid">
                         <form id="formularioNoticia" method="post" action="./insertarnoticia.php">
