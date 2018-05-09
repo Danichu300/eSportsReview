@@ -5,5 +5,7 @@ $(document).ready(function () {
     }).on("mouseout",function(){
         var imagen = $("#" + this.id);
         imagen.attr("src", "../img/plus.png");
+    }).on("click", function(){
+        $(".formularioInsert").toggle();
     });
 });
