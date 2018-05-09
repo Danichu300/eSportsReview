@@ -1,5 +1,12 @@
 # eSportsReview
 
+# Cómo funciona el proyecto:
+
+- En la sección de admin hay que introducir ID y contraseña -> ID 1 contraseña 123.
+- Al crear una noticia, la autorización es la ID del admin, 1.
+- Para insertar un comentario debes introducir tu nombre de usuario tal cual está escrito en la BD.
+- Para registrar un usuario, basta poner nombre y contraseña.
+
 ## Conseguido por ahora:
 
 - Portada.
