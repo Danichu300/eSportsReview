@@ -20,6 +20,10 @@
     color: white;
 }
 
+main{
+    padding-bottom: 15px;
+}
+
 article{
     color: white;
 }
@@ -41,16 +45,18 @@ article:hover{
     height: 60px;
 }
 
-#formularioPartidos{
+.formularioInsert{
     margin: 0 auto;
     width: 90%;
+    font-size: 50%;
+    margin-top: 10px;
 }
 /* 2c4875 */
-#formularioPartidos > input, #formularioPartidos > select{
-    width: 80%;
+.formularioInsert > input,select {
+    width: 100%;
 }
 
-#formularioPartidos > [type=submit]{
+.formularioInsert > [type=submit],p {
     margin-top: 10px;
 }
 
