@@ -5,7 +5,7 @@ $email = $_POST['admins'];
 $subject = $_POST['subject'];
 $message = $_POST['message'];
 $headers =  'MIME-Version: 1.0' . "\r\n"; 
-$headers .= 'From: Danichu300 <danikillersx@gmail.com>' . "\r\n";
+$headers .= 'From: eSports Service <esports.servicio.clientes@gmail.com>' . "\r\n";
 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
 
 /* PHP form validation: the script checks that the Email field contains a valid email address and the Subject field isn't empty. preg_match performs a regular expression match. It's a very powerful PHP function to validate form fields and other strings - see PHP manual for details. */
@@ -25,5 +25,7 @@ elseif (mail($email,$subject,$message,$headers)) {
   echo "<h4>Can't send email to $email</h4>";
   echo "<a href='javascript:history.back(1);'>Back</a>";
 }
+
+header("Location: ../index.html");
 
 ?>
