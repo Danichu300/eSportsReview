@@ -27,7 +27,7 @@ if ($result) {
     }
 }
 
-header("Location: ../noticias/csgo.php#formularioComentarios");
+header("Location: ../index.html");
 
 
 //}
