@@ -88,7 +88,7 @@ and open the template in the editor.
 
             <div class="jumbotron">
                 <h1 class="display-4">Counter-Strike Global Offensive</h1>
-                <p class="lead">El mejor shooter del momento.</p>
+                <p class="lead">El mejor shooter de la historia.</p>
                 <!--<hr class="my-4">
                 <p>Últimas novedades.</p>
                 <p class="lead">
@@ -106,11 +106,11 @@ and open the template in the editor.
                             <!--  <nav> -->
                             <ul>
                                 <?php
-                                $sql = 'SELECT fecha_inicio FROM partido WHERE fecha_inicio > NOW()';
+                                $sql = "SELECT * FROM partido WHERE fecha_inicio > NOW() AND videojuego = 'csgo'";
                                 $result = $conn->query($sql);
 
                                 while ($row = $result->fetch_assoc()) {
-                                    echo "<li>" . $row["fecha_inicio"] . "</li>";
+                                    echo "<li>" . $row["nombre_partido"] . "</li>";
                                 }
                                 ?>
                             </ul>
@@ -126,7 +126,7 @@ and open the template in the editor.
                             <!-- <nav> -->
                             <ul>
                                 <?php
-                                $sql = 'SELECT nombre_torneo FROM torneo JOIN partido ON partido=id_partido WHERE fecha_inicio > NOW()';
+                                $sql = "SELECT nombre_torneo FROM torneo JOIN partido ON partido=id_partido WHERE fecha_inicio > NOW() AND videojuego = 'csgo'";
                                 $result = $conn->query($sql);
 
                                 while ($row = $result->fetch_assoc()) {
@@ -146,7 +146,7 @@ and open the template in the editor.
                             <!-- <nav> -->
                             <ul>
                                 <?php
-                                $sql = 'SELECT * FROM equipo';
+                                $sql = "SELECT * FROM equipo WHERE videojuego = " . 1;
                                 $result = $conn->query($sql);
 
                                 while ($row = $result->fetch_assoc()) {
@@ -164,7 +164,7 @@ and open the template in the editor.
 
                     <div class="informacion" id="descripcion">
                         <?php
-                        $sql = "SELECT * FROM videojuego";
+                        $sql = "SELECT * FROM videojuego WHERE nombre_videojuego = 'Counter-Strike Global Offensive'";
                         $result = $conn->query($sql);
                         $row = $result->fetch_assoc();
                         echo "<h2>Videojuego: " . $row['nombre_videojuego'] . "</h2>";
@@ -240,7 +240,7 @@ and open the template in the editor.
                 </aside>
 
                 <?php
-                $sql = "SELECT * FROM comentario";
+                $sql = "SELECT * FROM comentario WHERE videojuego = 'csgo'";
                 $result = $conn->query($sql);
            
                 while($row = $result->fetch_array()){
@@ -352,7 +352,7 @@ and open the template in the editor.
                     <!--/.Third column-->
 
                     <!--Fourth column-->
-                    <div class="col-md-4 col-lg-3 col-xl-3">
+                    <div class="col-md-4 col-lg-3 col-xl-3" id="mensajes">
                         <h6 class="text-uppercase font-weight-bold">
                             <strong>Contacta con nosotros</strong>
                         </h6>
@@ -372,9 +372,9 @@ and open the template in the editor.
                                 <option>justcyclo@gmail.com</option>
                             </select>
                             <p><b>Subject</b><br>
-                                <input type="text" name="subject" size=40>
+                                <input type="text" name="subject" size=40 required>
                             <p><b>Message</b><br>
-                                <textarea cols=40 rows=10 name="message"></textarea>
+                                <textarea cols=40 rows=10 name="message" required></textarea>
                             <p><input type="submit" value=" Send ">
                         </form>
                     </div>
