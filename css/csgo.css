@@ -10,6 +10,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding-bottom: 15px;
 }
 
 /* Para evitar un espacio en blanco debajo del último aside. */
