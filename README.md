@@ -20,6 +20,7 @@ Si tenéis cualquier duda decidme por WhatsApp o dejadme un mensaje por aquí.
 - Hacer la plantilla de edición/creación de noticia.
 - Hacer que se guarden las noticias creadas.
 - Mostrar visualmente las noticias creadas guardadas.
+- Insertar partidos y torneos.
 
 ## Cosas que hay que hacer:
 
