@@ -8,6 +8,7 @@
 - Al crear una noticia, la autorización es la ID del admin, 1.
 - Para insertar un comentario debes introducir tu nombre de usuario tal cual está escrito en la BD.
 - Para registrar un usuario, basta poner nombre y contraseña.
+- Puedes enviar correos desde cualquier footer clicando al icono del sobre.
 
 ## Conseguido por ahora:
 
