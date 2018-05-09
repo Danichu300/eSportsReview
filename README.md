@@ -8,11 +8,11 @@ Si tenéis cualquier duda decidme por WhatsApp o dejadme un mensaje por aquí.
 ## Conseguido por ahora:
 
 - Portada.
-- Página del CSGO.
+- Página del CSGO, Overwatch, PUBG, HOTS, LOL, Rocket League, DOTA2.
 - Base de datos bien hecha.
 - Los datos se cargan de la base de datos.
 - Los enlaces de compartir en las redes sociales funcionan.
-- HE CONSEGUIDO ENVIAR CORREOS DESDE EL FOOTER!!! (necesitais un SMTP para ello). Va un poco como quiere.
+- HE CONSEGUIDO ENVIAR CORREOS DESDE EL FOOTER!!!
 - El login reconoce usuario y contraseña.
 - Añadir una sección de comentarios.
 - Registrar usuarios.
@@ -28,13 +28,10 @@ Si tenéis cualquier duda decidme por WhatsApp o dejadme un mensaje por aquí.
 ## Cosas menos urgentes:
 
 - Poner registros reales en la base de datos.
-- Hacerlo responsive.
 - Documentación.
 
-## Optimizaciones (lo último de todo):
+## Optimizaciones:
 
 - Pasarlo todo a CodeIgnite o cualquier otro modelo vista/controlador.
 - Cambiar CSS por LESS.
 - Cambiar el proyecto a Angular.
-
-Las optimizaciones es una cosa que si podemos las hacemos pero que no hay ningún problema si no las hacemos. Más que nada es para dejar el proyecto niquelado y tener más puntos, pero prefiero que prioricemos en que funcione bien.
