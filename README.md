@@ -1,10 +1,5 @@
 # eSportsReview
 
-Hola chicos!!
-
-Os iré dejando aquí los avances que vaya haciendo sobre el proyecto. Si podéis ayudadme ya que el proyecto es bastante largo xD. 
-Si tenéis cualquier duda decidme por WhatsApp o dejadme un mensaje por aquí.
-
 ## Conseguido por ahora:
 
 - Portada.
